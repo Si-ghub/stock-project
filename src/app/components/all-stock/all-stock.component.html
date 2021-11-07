@@ -1,0 +1,6 @@
+<p>All stock info</p>
+<ul>
+    <li *ngFor='let stock of stocks'>{{stock.name}}, {{stock.price}}, {{stock.favorite}}
+        <a [routerLink]="['/stock', stock.code]">Show info</a>
+    </li>
+</ul>
