@@ -8,9 +8,9 @@ import { Stock } from '../models/stock';
 })
 export class StockService {
 
-  constructor(private httpClient: HttpClient) {
-  }
-  public getStocks(): Observable<Stock[]> {
+  constructor(private httpClient: HttpClient) { }
+
+  public getStock(): Observable<Stock[]> {
     return this.httpClient.get<Stock[]>('http://localhost:3000/api/stock');
   }
 

@@ -1,14 +1,19 @@
 <div *ngIf="stock!=undefined">
     <form (ngSubmit)="submit()">
-        <input type="text" name="name" ngModel required placeholder="Name" [(ngModel)]="stock.name"><br>
-        <input type="text" name="code" ngModel required placeholder="Code" [(ngModel)]="stock.code" readonly><br>
-        <input type="text" name="price" ngModel required placeholder="Price" [(ngModel)]="stock.price"><br>
-        <input type="text" name="previousPrice" ngModel required placeholder="Previous Price" [(ngModel)]="stock.previousPrice"><br>
-        <input type="text" name="exchange" ngModel required placeholder="Exchange" [(ngModel)]="stock.exchange"><br>
+        <input type="text" name="name" ngModel placeholder="Name" [(ngModel)]="stock.name">
+        <br>
+        <input type="text" name="code" ngModel placeholder="Code" [(ngModel)]="stock.code" readonly>
+        <br>
+        <input type="number" name="price" ngModel required placeholder="Price" [(ngModel)]="stock.price">
+        <br>
+        <input type="number" name="previousPrice" ngModel required placeholder="Previous Price" [(ngModel)]="stock.previousPrice" readonly>
+        <br>
+        <input type="text" name="exchange" ngModel required placeholder="Exchange" [(ngModel)]="stock.exchange">
+        <br>
         <select name="favorite" ngModel [(ngModel)]="stock.favorite"><br>
             <option value="0">No</option>
             <option value="1">Yes</option>
         </select>
-        <button>Add</button>
+        <button>Make changes</button>
     </form>
 </div>

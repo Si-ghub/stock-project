@@ -1,6 +1,6 @@
 <p>All stock info</p>
 <ul>
-    <li *ngFor='let stock of stocks'>{{stock.name}}, {{stock.price}}, {{stock.favorite}}
-        <a [routerLink]="['/stock', stock.code]">Show info</a>
+    <li *ngFor='let stock of stocks'>Name: "{{stock.name}}", Price: {{stock.price}} eur, Previous price: {{stock.previousPrice}} eur, Exchange: {{stock.exchange}} {{stock.favorite}}
+        <a [routerLink]="['/stock', stock.code]">Show stock info</a>
     </li>
 </ul>

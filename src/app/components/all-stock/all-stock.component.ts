@@ -13,7 +13,7 @@ export class AllStockComponent implements OnInit {
   constructor(private stockService: StockService) { }
 
   ngOnInit(): void {
-    this.stockService.getStocks().subscribe((response: Stock[]) => {
+    this.stockService.getStock().subscribe((response: Stock[]) => {
       //console.log(response);
       this.stocks = response;
     })

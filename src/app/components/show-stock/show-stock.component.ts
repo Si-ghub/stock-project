@@ -17,12 +17,11 @@ export class ShowStockComponent implements OnInit {
   ngOnInit(): void {
     this.stockService.getShowStock(this.route.snapshot.params['code']).subscribe((response: Stock[]) => {
       this.stock = response[0];
-
       console.log(this.stock);
     });
   }
 
-  public submit() {
+  submit() {
     console.log(this.stock);
 
     this.stockService.patchStock(this.stock).subscribe(
@@ -31,7 +30,7 @@ export class ShowStockComponent implements OnInit {
         this.router.navigate(['/']);
       },
       (response) => {
-        console.log("Error: " + response)
+        console.log("Error" + response)
       });
   }
 }
